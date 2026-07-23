@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hostel Security Monitoring</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='hs.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Hostel Security Monitoring System</h1>
+
+    <div class="card">
+
+        <input type="text"
+               id="name"
+               placeholder="Enter Student Name">
+
+        <input type="text"
+               id="room"
+               placeholder="Enter Room Number">
+
+        <button onclick="registerStudent()">
+            Register Student
+        </button>
+
+        <button onclick="scanFace()">
+            Scan Face
+        </button>
+
+    </div>
+
+    <h2>Student List</h2>
+
+    <table>
+
+        <thead>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Room</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody id="studentTable">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="{{ url_for('static', filename='hs.js') }}"></script>
+
+</body>
+</html>
